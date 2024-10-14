@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mynavgraph"
+    app:startDestination="@id/toDoFragment">
+
+    <fragment
+        android:id="@+id/toDoFragment"
+        android:name="com.autonsi.devsimpletodoapp.views.TodoFragment"
+        android:label="fragment_todo"
+        tools:layout="@layout/fragment_todo" >
+
+        <action android:id="@+id/nav_todo_to_addedit"
+            app:destination="@+id/addEditFragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditFragment"
+        android:name="com.autonsi.devsimpletodoapp.views.AddEditFragment"
+        android:label="fragment_addedit"
+        tools:layout="@layout/fragment_add_edit" />
+</navigation>
